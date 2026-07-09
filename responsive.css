@@ -1,0 +1,927 @@
+/* =====================================================================
+   RESPONSIVE DESIGN — MOBILE, TABLET, DESKTOP OPTIMIZED
+   Breakpoints:
+   - Mobile:  < 640px
+   - Tablet:  640px - 1024px
+   - Desktop: > 1024px
+===================================================================== */
+
+/* ══════════════════════════════════════════════════════════════
+   TABLET & BELOW (≤ 1024px)
+══════════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  /* Container padding reduction */
+  .container {
+    padding: 0 1.5rem;
+  }
+  
+  .section {
+    padding: 4rem 0;
+  }
+  
+  /* Hero */
+  .hero {
+    min-height: 80vh;
+    padding: 0 1.5rem;
+  }
+  
+  .hero-title {
+    font-size: clamp(2.2rem, 6vw, 4rem);
+  }
+  
+  .hero-subtitle {
+    font-size: clamp(1rem, 2.2vw, 1.4rem);
+  }
+  
+  .hero-desc {
+    font-size: 0.95rem;
+  }
+  
+  .hero-btns {
+    gap: 0.6rem;
+  }
+  
+  .btn-primary,
+  .btn-outline {
+    padding: 0.75rem 2rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Stat Bar */
+  .stat-item {
+    padding: 2rem 0.75rem;
+  }
+  
+  .stat-num {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+  }
+  
+  .stat-label {
+    font-size: 0.75rem;
+  }
+  
+  /* Section Headers */
+  .section-heading {
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  }
+  
+  /* Characteristics Grid */
+  .chars-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  /* Health Grid */
+  .health-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
+  }
+  
+  /* Steps Grid */
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
+  }
+  
+  /* Team Grid */
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  
+  /* Table */
+  .table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .reg-table {
+    font-size: 0.85rem;
+  }
+  
+  .reg-table th,
+  .reg-table td {
+    padding: 0.75rem 0.85rem;
+  }
+  
+  /* Footer Grid */
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+  
+  .footer-col-brand {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   MOBILE & SMALL TABLET (≤ 768px)
+══════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  /* Typography scale down */
+  body {
+    font-size: 0.95rem;
+  }
+  
+  /* Container */
+  .container {
+    padding: 0 1.25rem;
+  }
+  
+  .section {
+    padding: 3rem 0;
+  }
+  
+  /* Navbar */
+  .navbar {
+    padding: 0 1.25rem;
+    height: 60px;
+  }
+  
+  .nav-logo {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .brand-title {
+    font-size: 0.9rem;
+  }
+  
+  .brand-sub {
+    font-size: 0.65rem;
+  }
+  
+  /* Hero */
+  .hero {
+    min-height: 70vh;
+    padding: 0 1.25rem;
+  }
+  
+  .hero-badges {
+    gap: 0.4rem;
+  }
+  
+  .hbadge {
+    font-size: 0.65rem;
+    padding: 0.25rem 0.65rem;
+  }
+  
+  .hero-title {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: clamp(0.95rem, 2.5vw, 1.2rem);
+  }
+  
+  .hero-desc {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-btns {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .btn-primary,
+  .btn-outline {
+    width: 100%;
+    justify-content: center;
+    padding: 0.85rem 1.5rem;
+  }
+  
+  /* Molekul Mini */
+  .mol-mini {
+    width: 90px;
+    height: 90px;
+    top: 85px;
+    right: 4%;
+  }
+  
+  .ma-c {
+    width: 30px;
+    height: 30px;
+    font-size: 0.55rem;
+  }
+  
+  .ma-o,
+  .ma-n,
+  .ma-cl {
+    width: 22px;
+    height: 22px;
+    font-size: 0.5rem;
+  }
+  
+  /* Stat Bar - Stack vertically on very small screens */
+  .stat-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .stat-item {
+    padding: 1.75rem 0.5rem;
+  }
+  
+  .stat-num {
+    font-size: clamp(1.6rem, 5vw, 2.5rem);
+  }
+  
+  .stat-label {
+    font-size: 0.7rem;
+  }
+  
+  /* Section Headers */
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+  
+  .section-label {
+    font-size: 0.65rem;
+    padding: 0.25rem 0.7rem;
+  }
+  
+  .section-heading {
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
+    margin-bottom: 0.5rem;
+  }
+  
+  .section-header p {
+    font-size: 0.9rem;
+  }
+  
+  /* Split Layout - Stack */
+  .section-split {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .split-visual {
+    order: -1;
+  }
+  
+  .split-text p {
+    font-size: 0.95rem;
+  }
+  
+  /* Characteristics Grid */
+  .chars-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  
+  .char-item {
+    padding: 1.5rem;
+  }
+  
+  .char-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .char-item h4 {
+    font-size: 1rem;
+  }
+  
+  .char-item p {
+    font-size: 0.85rem;
+  }
+  
+  /* Formula Box */
+  .formula-box {
+    padding: 2rem 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .formula-big {
+    font-size: 2rem;
+  }
+  
+  .formula-big sub {
+    font-size: 1.2rem;
+  }
+  
+  .formula-mw {
+    font-size: 0.95rem;
+  }
+  
+  .formula-iupac {
+    padding: 1rem;
+    font-size: 0.8rem;
+  }
+  
+  /* Health Cards */
+  .health-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .health-card {
+    padding: 1.5rem;
+  }
+  
+  .health-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .health-card p {
+    font-size: 0.85rem;
+  }
+  
+  /* Steps Grid */
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  
+  .step-card {
+    padding: 1.5rem;
+  }
+  
+  .step-num {
+    font-size: 1.5rem;
+    width: 48px;
+    height: 48px;
+  }
+  
+  .step-card h4 {
+    font-size: 1rem;
+  }
+  
+  .step-card p {
+    font-size: 0.85rem;
+  }
+  
+  /* Filter Buttons */
+  .filter-btns {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .filter-btn {
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  /* Table Responsive */
+  .reg-table {
+    font-size: 0.8rem;
+    min-width: 600px;
+  }
+  
+  .reg-table th,
+  .reg-table td {
+    padding: 0.65rem 0.75rem;
+  }
+  
+  /* Team Grid */
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+  
+  .team-card {
+    padding: 0;
+  }
+  
+  .team-photo {
+    height: 240px;
+  }
+  
+  .team-card h4 {
+    font-size: 0.95rem;
+    margin: 1.1rem 0.9rem 0.4rem;
+  }
+  
+  .team-nim {
+    font-size: 0.75rem;
+    padding-bottom: 1.1rem;
+  }
+  
+  /* Quiz Modal */
+  .quiz-modal {
+    width: 90%;
+    max-width: 500px;
+    padding: 1.75rem;
+  }
+  
+  .quiz-header h2 {
+    font-size: 1.3rem;
+  }
+  
+  #quizContent {
+    font-size: 0.95rem;
+  }
+  
+  /* FAB Quiz */
+  .fab-quiz {
+    width: 54px;
+    height: 54px;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .fab-quiz span {
+    font-size: 1.4rem;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   MOBILE ONLY (≤ 640px)
+══════════════════════════════════════════════════════════════ */
+@media (max-width: 640px) {
+  /* Ultra compact for small phones */
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .section {
+    padding: 2.5rem 0;
+  }
+  
+  /* Navbar */
+  .navbar {
+    padding: 0 1rem;
+    height: 56px;
+  }
+  
+  .nav-brand {
+    gap: 0.5rem;
+  }
+  
+  .nav-logo {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .brand-title {
+    font-size: 0.85rem;
+  }
+  
+  .brand-sub {
+    font-size: 0.6rem;
+  }
+  
+  /* Hero */
+  .hero {
+    min-height: 65vh;
+    padding: 0 1rem;
+  }
+  
+  .hero-content {
+    max-width: 100%;
+  }
+  
+  .hero-badges {
+    justify-content: center;
+    gap: 0.35rem;
+  }
+  
+  .hbadge {
+    font-size: 0.6rem;
+    padding: 0.2rem 0.55rem;
+  }
+  
+  .hero-title {
+    font-size: clamp(1.8rem, 10vw, 3rem);
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .hero-desc {
+    font-size: 0.85rem;
+    line-height: 1.65;
+  }
+  
+  .btn-primary,
+  .btn-outline {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.85rem;
+  }
+  
+  /* Molekul Mini - Even smaller */
+  .mol-mini {
+    width: 75px;
+    height: 75px;
+    top: 80px;
+    right: 3%;
+  }
+  
+  .ma-c {
+    width: 26px;
+    height: 26px;
+    font-size: 0.5rem;
+  }
+  
+  .ma-o,
+  .ma-n,
+  .ma-cl {
+    width: 19px;
+    height: 19px;
+    font-size: 0.45rem;
+  }
+  
+  /* Stat Bar - Full stack on tiny screens */
+  .stat-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .stat-item {
+    padding: 1.5rem 0.35rem;
+  }
+  
+  .stat-num {
+    font-size: clamp(1.4rem, 6vw, 2.2rem);
+  }
+  
+  .stat-label {
+    font-size: 0.65rem;
+    line-height: 1.3;
+  }
+  
+  /* Section Headers */
+  .section-header {
+    margin-bottom: 2rem;
+  }
+  
+  .section-label {
+    font-size: 0.6rem;
+  }
+  
+  .section-heading {
+    font-size: clamp(1.35rem, 6vw, 2rem);
+  }
+  
+  .section-header p {
+    font-size: 0.85rem;
+  }
+  
+  /* Fungi Cards */
+  .fungi-grid-new {
+    gap: 2rem;
+  }
+  
+  .fungi-photo-container {
+    padding: 1.25rem;
+  }
+  
+  .fungi-photo {
+    height: 200px;
+  }
+  
+  .fungi-info {
+    padding: 1.5rem 1.25rem;
+  }
+  
+  .fungi-label-badge {
+    font-size: 0.55rem;
+    padding: 0.3rem 0.65rem;
+  }
+  
+  .fungi-name {
+    font-size: 1.3rem;
+  }
+  
+  .fungi-desc {
+    font-size: 0.85rem;
+  }
+  
+  .meta-item {
+    padding: 0.65rem;
+    gap: 0.7rem;
+  }
+  
+  .meta-icon {
+    font-size: 1.2rem;
+  }
+  
+  .meta-item strong {
+    font-size: 0.65rem;
+  }
+  
+  .meta-item span {
+    font-size: 0.8rem;
+  }
+  
+  /* Characteristics */
+  .chars-grid {
+    gap: 1rem;
+  }
+  
+  .char-item {
+    padding: 1.25rem;
+  }
+  
+  .char-icon {
+    font-size: 1.75rem;
+  }
+  
+  .char-item h4 {
+    font-size: 0.95rem;
+  }
+  
+  .char-item p {
+    font-size: 0.8rem;
+  }
+  
+  /* Formula Box */
+  .formula-box {
+    padding: 1.75rem 1.25rem;
+  }
+  
+  .formula-label {
+    font-size: 0.7rem;
+  }
+  
+  .formula-big {
+    font-size: 1.75rem;
+  }
+  
+  .formula-big sub {
+    font-size: 1rem;
+  }
+  
+  .formula-mw {
+    font-size: 0.9rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .formula-iupac {
+    padding: 0.9rem;
+    font-size: 0.75rem;
+  }
+  
+  /* Health Cards */
+  .health-card {
+    padding: 1.25rem;
+  }
+  
+  .health-organ {
+    font-size: 0.6rem;
+    padding: 0.25rem 0.6rem;
+  }
+  
+  .health-level {
+    font-size: 0.6rem;
+    padding: 0.25rem 0.6rem;
+  }
+  
+  .health-card h3 {
+    font-size: 1rem;
+    margin: 0.75rem 0;
+  }
+  
+  .health-card p {
+    font-size: 0.8rem;
+  }
+  
+  /* Steps */
+  .steps-grid {
+    gap: 1rem;
+  }
+  
+  .step-card {
+    padding: 1.25rem;
+  }
+  
+  .step-num {
+    font-size: 1.3rem;
+    width: 44px;
+    height: 44px;
+  }
+  
+  .step-card h4 {
+    font-size: 0.95rem;
+  }
+  
+  .step-card p {
+    font-size: 0.8rem;
+  }
+  
+  .moisture-bar {
+    height: 22px;
+  }
+  
+  .moisture-mark {
+    font-size: 0.7rem;
+  }
+  
+  /* Team Grid - Single column on tiny screens */
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .team-photo {
+    height: 200px;
+  }
+  
+  .team-card h4 {
+    font-size: 0.9rem;
+    margin: 1rem 0.75rem 0.35rem;
+  }
+  
+  .team-nim {
+    font-size: 0.7rem;
+    padding-bottom: 1rem;
+  }
+  
+  /* Footer */
+  .footer-main {
+    padding: 3rem 0 2rem;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .footer-logo {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .footer-brand {
+    font-size: 1.15rem;
+  }
+  
+  .footer-sub {
+    font-size: 0.7rem;
+  }
+  
+  .footer-desc {
+    font-size: 0.85rem;
+  }
+  
+  .footer-badge {
+    font-size: 0.7rem;
+    padding: 0.45rem 0.9rem;
+  }
+  
+  .footer-heading {
+    font-size: 0.8rem;
+  }
+  
+  .footer-info-card {
+    padding: 0.75rem;
+    gap: 0.7rem;
+  }
+  
+  .info-icon {
+    font-size: 1.3rem;
+  }
+  
+  .info-content strong {
+    font-size: 0.7rem;
+  }
+  
+  .info-content span,
+  .info-content a {
+    font-size: 0.8rem;
+  }
+  
+  .footer-nav-link {
+    font-size: 0.8rem;
+    padding: 0.35rem 0.4rem;
+  }
+  
+  .footer-bottom {
+    padding: 1.25rem 0;
+  }
+  
+  .footer-bottom-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.65rem;
+  }
+  
+  .footer-copyright {
+    justify-content: center;
+    font-size: 0.8rem;
+  }
+  
+  .footer-meta {
+    justify-content: center;
+  }
+  
+  .meta-badge {
+    font-size: 0.7rem;
+  }
+  
+  /* Quiz Modal */
+  .quiz-modal {
+    width: 95%;
+    max-width: 450px;
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .quiz-header h2 {
+    font-size: 1.2rem;
+  }
+  
+  .quiz-close {
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
+  }
+  
+  #quizContent {
+    font-size: 0.9rem;
+  }
+  
+  .quiz-opt {
+    padding: 0.75rem 0.9rem !important;
+    font-size: 0.85rem !important;
+  }
+  
+  /* FAB Quiz */
+  .fab-quiz {
+    width: 50px;
+    height: 50px;
+    bottom: 16px;
+    right: 16px;
+  }
+  
+  .fab-quiz span {
+    font-size: 1.3rem;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   LANDSCAPE MOBILE (height < 500px)
+══════════════════════════════════════════════════════════════ */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    min-height: 100vh;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+  }
+  
+  .hero-title {
+    font-size: clamp(1.5rem, 5vh, 2.5rem);
+  }
+  
+  .hero-subtitle {
+    font-size: clamp(0.85rem, 3vh, 1.1rem);
+  }
+  
+  .hero-desc {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-btns {
+    flex-direction: row;
+    gap: 0.75rem;
+  }
+  
+  .btn-primary,
+  .btn-outline {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.8rem;
+  }
+  
+  .mol-mini {
+    width: 70px;
+    height: 70px;
+    top: 70px;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   PRINT STYLES
+══════════════════════════════════════════════════════════════ */
+@media print {
+  .navbar,
+  .molecule-controls,
+  .molecule-hint,
+  .filter-btns,
+  .fab-quiz,
+  .quiz-overlay {
+    display: none !important;
+  }
+  
+  .hero {
+    min-height: auto;
+    page-break-after: always;
+  }
+  
+  .section {
+    page-break-inside: avoid;
+  }
+  
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .footer {
+    page-break-before: always;
+  }
+}

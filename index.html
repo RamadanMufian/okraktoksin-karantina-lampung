@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Okratoksin | Karantina Lampung</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="responsive.css"/>
+</head>
+<body>
+
+<!-- Load molecule data first -->
+<script src="molecule-data.js"></script>
+
+<!-- ░░ NAVBAR STICKY ░░ -->
+<nav class="navbar" id="navbar">
+  <a href="#hero" class="nav-brand">
+    <img src="logo-karantina.png" alt="Logo Karantina" class="nav-logo"/>
+    <div class="brand-text-wrap">
+      <span class="brand-title">Okratoksin</span>
+      <span class="brand-sub">Karantina Lampung</span>
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#ringkasan" class="nav-link">Ringkasan</a></li>
+    <li><a href="#cendawan" class="nav-link">Cendawan</a></li>
+    <li><a href="#struktur" class="nav-link">Struktur</a></li>
+    <li><a href="#dampak" class="nav-link">Dampak</a></li>
+    <li><a href="#penanganan" class="nav-link">Penanganan</a></li>
+    <li><a href="#regulasi" class="nav-link">Regulasi</a></li>
+    <li><a href="#tim" class="nav-link">Tim</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ░░ HERO ░░ -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1600&q=80" alt=""/>
+    <div class="hero-overlay"></div>
+  </div>
+
+  <!-- Molekul 3D diperkecil, posisi kanan atas -->
+  <div class="mol-mini" id="molMini">
+    <div class="mol-atom ma-c">C</div>
+    <div class="mol-atom ma-o">O</div>
+    <div class="mol-atom ma-n">N</div>
+    <div class="mol-atom ma-cl">Cl</div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-badges">
+      <span class="hbadge">Mikotoksin #2</span>
+      <span class="hbadge">C₂₀H₁₈ClNO₆</span>
+      <span class="hbadge hbadge-red">Karsinogenik</span>
+    </div>
+    <h1 class="hero-title">Okratoksin A</h1>
+    <p class="hero-subtitle">Musuh tak terlihat dalam biji kopi</p>
+    <p class="hero-desc">
+      Racun alami dari kapang pada biji kopi lembap. Tak berbau, tak berwarna, namun dapat merusak ginjal dan memicu tumor.
+    </p>
+    <div class="hero-btns">
+      <a href="#ringkasan" class="btn-primary">Mulai Belajar</a>
+      <a href="#dampak" class="btn-outline">Lihat Dampak</a>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ STAT BAR ░░ -->
+<div class="stat-bar" id="ringkasan">
+  <div class="stat-item">
+    <span class="stat-num" data-target="2">—</span>
+    <span class="stat-label">Peringkat Bahaya</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num" data-target="403.8" data-decimal="1">—</span>
+    <span class="stat-label">Berat Molekul (g/mol)</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num" data-target="6">—</span>
+    <span class="stat-label">Negara Regulasi OTA</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num" data-target="12.5" data-decimal="1">—</span>
+    <span class="stat-label">Kadar Air Aman (%)</span>
+  </div>
+</div>
+
+<!-- ░░ ABOUT ░░ -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="section-split">
+      <div class="split-text">
+        <span class="section-label">01 — Apa itu Okratoksin?</span>
+        <h2 class="section-heading">Racun tersembunyi dalam secangkir kopi</h2>
+        <p>
+          Okratoksin adalah racun alami (mikotoksin) yang dihasilkan jamur atau kapang pada kopi. Ochratoxin A (OTA) dianggap sebagai kelompok mikotoksin utama kedua setelah aflatoksin — menjadikannya salah satu ancaman keamanan pangan paling serius pada rantai pasok kopi global.
+        </p>
+        <p>
+          Kontaminasi OTA umumnya terjadi pada tahap pascapanen: saat biji kopi lembap dijemur, disimpan, atau diangkut tanpa sirkulasi udara yang memadai.
+        </p>
+      </div>
+      <div class="split-visual">
+        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&q=80" alt="Biji kopi"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ CENDAWAN ░░ -->
+<section class="section section-alt" id="cendawan">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">02 — Cendawan Inang</span>
+      <h2 class="section-heading">Tiga kapang penghasil OTA</h2>
+      <p>Setiap spesies memiliki karakteristik unik, habitat, dan tingkat toksisitas berbeda</p>
+    </div>
+    <div class="fungi-grid-new">
+      <!-- Card 1 -->
+      <article class="fungi-card-new" data-fungi="ochraceus">
+        <div class="fungi-photo-container">
+          <div class="fungi-photo-frame">
+            <img src="aspergillus-ochraceus.jpg" alt="Aspergillus ochraceus" class="fungi-photo"/>
+            <div class="fungi-photo-overlay">
+              <span class="fungi-zoom-icon">🔬</span>
+            </div>
+          </div>
+          <div class="fungi-toxicity">
+            <div class="tox-bar"><div class="tox-fill" data-level="90"></div></div>
+            <span class="tox-label">Toksisitas: Sangat Tinggi</span>
+          </div>
+        </div>
+        <div class="fungi-info">
+          <div class="fungi-label-badge">INANG UTAMA</div>
+          <h3 class="fungi-name"><em>Aspergillus ochraceus</em></h3>
+          <p class="fungi-desc">Kapang klasik penghasil OTA, umum ditemukan pada biji kopi yang disimpan dalam kondisi lembap dan hangat. Spesies ini dianggap sebagai produsen OTA paling signifikan dalam rantai pasok kopi global.</p>
+          <div class="fungi-meta">
+            <div class="meta-item">
+              <span class="meta-icon">🌡️</span>
+              <div>
+                <strong>Suhu optimal</strong>
+                <span>25-30°C</span>
+              </div>
+            </div>
+            <div class="meta-item">
+              <span class="meta-icon">💧</span>
+              <div>
+                <strong>Kelembapan</strong>
+                <span>80-95% RH</span>
+              </div>
+            </div>
+            <div class="meta-item">
+              <span class="meta-icon">📍</span>
+              <div>
+                <strong>Habitat</strong>
+                <span>Gudang, karung penyimpanan</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="fungi-card-new" data-fungi="niger">
+        <div class="fungi-photo-container">
+          <div class="fungi-photo-frame">
+            <img src="aspergillus-niger.jpg" alt="Aspergillus niger" class="fungi-photo"/>
+            <div class="fungi-photo-overlay">
+              <span class="fungi-zoom-icon">🔬</span>
+            </div>
+          </div>
+          <div class="fungi-toxicity">
+            <div class="tox-bar"><div class="tox-fill" data-level="65"></div></div>
+            <span class="tox-label">Toksisitas: Sedang-Tinggi</span>
+          </div>
+        </div>
+        <div class="fungi-info">
+          <div class="fungi-label-badge badge-secondary">GALUR TERTENTU</div>
+          <h3 class="fungi-name"><em>Aspergillus niger</em></h3>
+          <p class="fungi-desc">Beberapa galur <em>A. niger</em> bersifat toksigenik dan memproduksi OTA, terutama pada kondisi tropis. Tidak semua strain menghasilkan racun, namun identifikasi spesifik tetap diperlukan untuk kontrol mutu.</p>
+          <div class="fungi-meta">
+            <div class="meta-item">
+              <span class="meta-icon">🌡️</span>
+              <div>
+                <strong>Suhu optimal</strong>
+                <span>28-35°C</span>
+              </div>
+            </div>
+            <div class="meta-item">
+              <span class="meta-icon">🖤</span>
+              <div>
+                <strong>Warna koloni</strong>
+                <span>Hitam pekat</span>
+              </div>
+            </div>
+            <div class="meta-item">
+              <span class="meta-icon">🌴</span>
+              <div>
+                <strong>Zona geografis</strong>
+                <span>Daerah tropis/subtropis</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="fungi-card-new" data-fungi="carbonarius">
+        <div class="fungi-photo-container">
+          <div class="fungi-photo-frame">
+            <img src="aspergillus-carbonarius.jpg" alt="Aspergillus carbonarius" class="fungi-photo"/>
+            <div class="fungi-photo-overlay">
+              <span class="fungi-zoom-icon">🔬</span>
+            </div>
+          </div>
+          <div class="fungi-toxicity">
+            <div class="tox-bar"><div class="tox-fill" data-level="88"></div></div>
+            <span class="tox-label">Toksisitas: Sangat Tinggi</span>
+          </div>
+        </div>
+        <div class="fungi-info">
+          <div class="fungi-label-badge">INANG UTAMA</div>
+          <h3 class="fungi-name"><em>Aspergillus carbonarius</em></h3>
+          <p class="fungi-desc">Penghasil utama OTA pada kopi dan anggur di daerah tropis, sering ditemukan pada biji kopi pascapanen. Prevalensi tinggi pada iklim hangat dan lembap menjadikannya ancaman serius bagi eksportir kopi.</p>
+          <div class="fungi-meta">
+            <div class="meta-item">
+              <span class="meta-icon">☕</span>
+              <div>
+                <strong>Komoditas utama</strong>
+                <span>Kopi & anggur</span>
+              </div>
+            </div>
+            <div class="meta-item">
+              <span class="meta-icon">💧</span>
+              <div>
+                <strong>Water activity</strong>
+                <span>aw &gt; 0.85</span>
+              </div>
+            </div>
+            <div class="meta-item">
+              <span class="meta-icon">🌍</span>
+              <div>
+                <strong>Distribusi global</strong>
+                <span>Asia, Afrika, Amerika Latin</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ STRUKTUR ░░ -->
+<section class="section" id="struktur">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">03 — Karakteristik Senyawa</span>
+      <h2 class="section-heading">Sifat fisika-kimia Ochratoxin A</h2>
+    </div>
+
+    <!-- 3D Molecule Viewer -->
+    <div class="molecule-viewer-container">
+      <div class="molecule-viewer" id="moleculeViewer">
+        <canvas id="moleculeCanvas"></canvas>
+        <div class="molecule-info-overlay">
+          <div class="mol-info-badge">
+            <span class="mol-info-label">Formula</span>
+            <span class="mol-info-value" id="molFormula">C₂₀H₁₈ClNO₆</span>
+          </div>
+          <div class="mol-info-badge">
+            <span class="mol-info-label">Berat Molekul</span>
+            <span class="mol-info-value" id="molWeight">403.81 g/mol</span>
+          </div>
+          <div class="mol-info-badge">
+            <span class="mol-info-label">CAS Number</span>
+            <span class="mol-info-value" id="molCAS">303-47-9</span>
+          </div>
+        </div>
+        <div class="molecule-controls">
+          <button class="mol-btn" id="molRotate" title="Auto-rotate">
+            <span>🔄</span>
+          </button>
+          <button class="mol-btn" id="molReset" title="Reset view">
+            <span>⟲</span>
+          </button>
+          <button class="mol-btn" id="molZoomIn" title="Zoom in">
+            <span>+</span>
+          </button>
+          <button class="mol-btn" id="molZoomOut" title="Zoom out">
+            <span>−</span>
+          </button>
+        </div>
+        <div class="molecule-hint">
+          <span>🖱️ Drag to rotate • Scroll to zoom</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="chars-grid">
+      <div class="char-item">
+        <div class="char-icon">💎</div>
+        <h4>Kristal putih</h4>
+        <p>Tampak sebagai serbuk kristalin tak berwarna dalam bentuk murninya.</p>
+      </div>
+      <div class="char-item">
+        <div class="char-icon">✦</div>
+        <h4>Berfluoresensi UV</h4>
+        <p>Memancarkan cahaya hijau kebiruan di bawah sinar ultraviolet — dasar deteksi laboratorium.</p>
+      </div>
+      <div class="char-item">
+        <div class="char-icon">🔥</div>
+        <h4>Tahan panas</h4>
+        <p>Tidak sepenuhnya rusak oleh proses penyangraian suhu tinggi.</p>
+      </div>
+      <div class="char-item">
+        <div class="char-icon">●</div>
+        <h4>Larut lemak &amp; toksik</h4>
+        <p>Bersifat lipofilik sehingga mudah terserap tubuh dan terakumulasi pada jaringan.</p>
+      </div>
+    </div>
+    <div class="formula-box">
+      <div class="formula-label">Rumus Kimia</div>
+      <div class="formula-big">C<sub>20</sub>H<sub>18</sub>ClNO<sub>6</sub></div>
+      <div class="formula-mw">Berat Molekul: 403.81 g/mol</div>
+      <div class="formula-iupac">
+        <strong>IUPAC:</strong> (2S)-2-{[(3R)-5-kloro-8-hidroksi-3-metil-1-okso-3,4-dihidroisokromen-7-karbonil]amino}-3-fenilpropanoat
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ DAMPAK ░░ -->
+<section class="section section-danger" id="dampak">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label label-danger">04 — Bahaya Kesehatan</span>
+      <h2 class="section-heading">Enam dampak klinis paparan OTA</h2>
+    </div>
+    <div class="health-grid">
+      <div class="health-card">
+        <div class="health-top">
+          <span class="health-organ">GINJAL</span>
+          <span class="health-level level-high">Sangat Tinggi</span>
+        </div>
+        <h3>Gagal Ginjal &amp; Tumor</h3>
+        <p>Paparan kronis dikaitkan dengan kerusakan ginjal progresif dan pertumbuhan tumor.</p>
+        <div class="health-bar"><div class="health-fill" data-w="90"></div></div>
+      </div>
+      <div class="health-card">
+        <div class="health-top">
+          <span class="health-organ">GINJAL</span>
+          <span class="health-level level-high">Sangat Tinggi</span>
+        </div>
+        <h3>Nefrotoksik</h3>
+        <p>Racun menyasar secara spesifik jaringan tubulus ginjal, mengganggu fungsi filtrasi.</p>
+        <div class="health-bar"><div class="health-fill" data-w="85"></div></div>
+      </div>
+      <div class="health-card">
+        <div class="health-top">
+          <span class="health-organ">SELULER</span>
+          <span class="health-level level-med">Tinggi</span>
+        </div>
+        <h3>Genotoksik</h3>
+        <p>Merusak materi genetik pada sel HepG2 (sel hati) dalam model uji laboratorium.</p>
+        <div class="health-bar"><div class="health-fill" data-w="78"></div></div>
+      </div>
+      <div class="health-card">
+        <div class="health-top">
+          <span class="health-organ">KRONIS</span>
+          <span class="health-level level-high">Sangat Tinggi</span>
+        </div>
+        <h3>Karsinogenik</h3>
+        <p>Tergolong senyawa berpotensi memicu kanker pada paparan jangka panjang (IARC Grup 2B).</p>
+        <div class="health-bar"><div class="health-fill" data-w="88"></div></div>
+      </div>
+      <div class="health-card">
+        <div class="health-top">
+          <span class="health-organ">DARAH</span>
+          <span class="health-level level-med">Tinggi</span>
+        </div>
+        <h3>Kematian Eritrosit</h3>
+        <p>Menyebabkan apoptosis pada sel darah merah, berpotensi menimbulkan anemia hemolitik.</p>
+        <div class="health-bar"><div class="health-fill" data-w="74"></div></div>
+      </div>
+      <div class="health-card">
+        <div class="health-top">
+          <span class="health-organ">OTAK</span>
+          <span class="health-level level-extreme">Ekstrem</span>
+        </div>
+        <h3>Nekrosis 50% Neuro-2a</h3>
+        <p>Mematikan 50% sel saraf Neuro-2a — pemicu potensial kanker otak dan gangguan neurologis.</p>
+        <div class="health-bar"><div class="health-fill" data-w="95"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ PENANGANAN ░░ -->
+<section class="section" id="penanganan">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">05 — Penanganan &amp; Pencegahan</span>
+      <h2 class="section-heading">Enam langkah kendalikan OTA</h2>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <h4>Sortasi Awal</h4>
+        <p>Memisahkan buah busuk, ranting, dan kotoran tanah sebelum proses pengeringan dimulai.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <h4>Penjemuran di Atas Rak</h4>
+        <p>Menggunakan rak-rak agar biji tidak kontak langsung dengan tanah, sekaligus menjaga sirkulasi udara.</p>
+      </div>
+      <div class="step-card step-highlight">
+        <div class="step-num">03</div>
+        <h4>Pengeringan hingga ≤ 12,5%</h4>
+        <p>Proses pengeringan dilakukan sampai kadar air mencapai ambang aman 12,5% atau lebih rendah.</p>
+        <div class="moisture-bar">
+          <div class="moisture-fill" id="moistureFill"></div>
+          <span class="moisture-mark">12.5%</span>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">04</div>
+        <h4>Pisahkan Berdasar Kadar Air</h4>
+        <p>Biji dengan kadar air ≥ 12,5% tidak disimpan bersama biji yang telah memenuhi standar.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">05</div>
+        <h4>Pisahkan Ruang Produk</h4>
+        <p>Produk mentah dan produk akhir disimpan di ruangan berbeda untuk mencegah kontaminasi silang.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">06</div>
+        <h4>Kontrol Gudang</h4>
+        <p>Kelembapan udara dan suhu ruang penyimpanan dipantau secara berkala untuk mencegah pertumbuhan kapang.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ REGULASI ░░ -->
+<section class="section section-alt" id="regulasi">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">06 — Regulasi Kontaminan Global</span>
+      <h2 class="section-heading">Standar tiap negara berbeda-beda</h2>
+      <p>Setiap negara tujuan ekspor menetapkan batas maksimum OTA (µg/kg) yang berbeda untuk kopi sangrai maupun kopi instan.</p>
+    </div>
+
+    <div class="filter-btns">
+      <button class="filter-btn active" data-filter="all">Semua jenis</button>
+      <button class="filter-btn" data-filter="sangrai">Kopi sangrai</button>
+      <button class="filter-btn" data-filter="instan">Kopi instan</button>
+    </div>
+
+    <div class="table-wrap">
+      <table class="reg-table" id="regTable">
+        <thead>
+          <tr>
+            <th class="sortable" data-col="0">No. <span class="sort-ico">⇅</span></th>
+            <th class="sortable" data-col="1">Negara <span class="sort-ico">⇅</span></th>
+            <th data-col="2">Jenis Komoditas</th>
+            <th class="sortable" data-col="3">Batas Maks. OTA-A (µg/kg) <span class="sort-ico">⇅</span></th>
+          </tr>
+        </thead>
+        <tbody id="regBody">
+          <tr data-type="sangrai"><td>1</td><td>🇲🇦 Maroko</td><td>Kopi sangrai &amp; kopi bubuk (excl. instan)</td><td><span class="lim-badge lim-mid">5.0</span></td></tr>
+          <tr data-type="instan"><td></td><td></td><td>Kopi instan (soluble)</td><td><span class="lim-badge lim-high">10.0</span></td></tr>
+          <tr data-type="sangrai"><td>2</td><td>🇨🇳 China</td><td>Kopi bubuk (roasted)</td><td><span class="lim-badge lim-mid">5.0</span></td></tr>
+          <tr data-type="instan"><td></td><td></td><td>Kopi instan</td><td><span class="lim-badge lim-high">10.0</span></td></tr>
+          <tr data-type="sangrai"><td>3</td><td>🇪🇬 Mesir</td><td>Kopi bubuk (roasted)</td><td><span class="lim-badge lim-low">3.0</span></td></tr>
+          <tr data-type="instan"><td></td><td></td><td>Kopi instan</td><td><span class="lim-badge lim-mid">5.0</span></td></tr>
+          <tr data-type="sangrai"><td>4</td><td>🇳🇱 Belanda</td><td>Kopi sangrai &amp; bubuk (excl. instan)</td><td><span class="lim-badge lim-low">3.0</span></td></tr>
+          <tr data-type="instan"><td></td><td></td><td>Kopi instan (soluble)</td><td><span class="lim-badge lim-mid">5.0</span></td></tr>
+          <tr data-type="sangrai"><td>5</td><td>🇬🇪 Georgia</td><td>Kopi sangrai &amp; bubuk (excl. instan)</td><td><span class="lim-badge lim-low">3.0</span></td></tr>
+          <tr data-type="instan"><td></td><td></td><td>Kopi instan (soluble)</td><td><span class="lim-badge lim-mid">5.0</span></td></tr>
+          <tr data-type="sangrai"><td>6</td><td>🇹🇳 Tunisia</td><td>Kopi sangrai &amp; bubuk (excl. instan)</td><td><span class="lim-badge lim-mid">5.0</span></td></tr>
+          <tr data-type="instan"><td></td><td></td><td>Kopi instan (soluble)</td><td><span class="lim-badge lim-high">10.0</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ TIM ░░ -->
+<section class="section" id="tim">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">07 — Biodata Kelompok</span>
+      <h2 class="section-heading">Tim penyusun</h2>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-photo">
+          <img src="team-adel.jpg" alt="Adelia Putri Khaila"/>
+        </div>
+        <h4>Adelia Putri Khaila</h4>
+        <span class="team-nim">E1K23011</span>
+      </div>
+      <div class="team-card">
+        <div class="team-photo">
+          <img src="team-apri.jpg" alt="Apri Fajar Susmiati"/>
+        </div>
+        <h4>Apri Fajar Susmiati</h4>
+        <span class="team-nim">E1K23009</span>
+      </div>
+      <div class="team-card">
+        <div class="team-photo">
+          <img src="team-anggi.jpg" alt="Anggi Dwi Cahyati"/>
+        </div>
+        <h4>Anggi Dwi Cahyati</h4>
+        <span class="team-nim">E1K23023</span>
+      </div>
+      <div class="team-card">
+        <div class="team-photo">
+          <img src="team-jea.jpg" alt="Jea Afdila Durlle"/>
+        </div>
+        <h4>Jea Afdila Durlle</h4>
+        <span class="team-nim">E1K23036</span>
+      </div>
+      <div class="team-card">
+        <div class="team-photo">
+          <img src="team-lidia.jpg" alt="Lidia"/>
+        </div>
+        <h4>Lidia</h4>
+        <span class="team-nim">E1K23001</span>
+      </div>
+      <div class="team-card">
+        <div class="team-photo">
+          <img src="team-virna.jpg" alt="Virna Endang Sartika"/>
+        </div>
+        <h4>Virna Endang Sartika</h4>
+        <span class="team-nim">E1K23007</span>
+      </div>
+      <div class="team-card">
+        <div class="team-photo">
+          <img src="team-yola.jpg" alt="Yolaini Pratama"/>
+        </div>
+        <h4>Yolaini Pratama</h4>
+        <span class="team-nim">E1K23013</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ FOOTER ░░ -->
+<footer class="footer">
+  <div class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Column 1: Branding & Description -->
+        <div class="footer-col footer-col-brand">
+          <div class="footer-logo-wrap">
+            <img src="logo-karantina.png" alt="Logo Karantina Lampung" class="footer-logo"/>
+            <div class="footer-brand-text">
+              <div class="footer-brand">Okratoksin</div>
+              <div class="footer-sub">Karantina Lampung</div>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Materi edukasi interaktif tentang toksikologi Okratoksin A pada komoditas kopi, disusun untuk mendukung pemahaman keamanan pangan pertanian.
+          </p>
+          <div class="footer-badge">
+            <span class="badge-icon">🎓</span>
+            <span>Website Pembelajaran</span>
+          </div>
+        </div>
+
+        <!-- Column 2: Instansi -->
+        <div class="footer-col">
+          <h5 class="footer-heading">Instansi</h5>
+          <div class="footer-info-card">
+            <div class="info-icon">🏛️</div>
+            <div class="info-content">
+              <strong>Balai Karantina Pertanian</strong>
+              <span>Hewan, Ikan dan Tumbuhan</span>
+            </div>
+          </div>
+          <div class="footer-info-card">
+            <div class="info-icon">📍</div>
+            <div class="info-content">
+              <strong>Alamat</strong>
+              <span>Jl. Soekarno-Hatta Km. 20<br/>Way Laga, Kec. Panjang<br/>Kota Bandar Lampung, 35244</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 3: Kontak & Layanan -->
+        <div class="footer-col">
+          <h5 class="footer-heading">Kontak & Layanan</h5>
+          <div class="footer-info-card">
+            <div class="info-icon">📧</div>
+            <div class="info-content">
+              <strong>Email</strong>
+              <a href="mailto:karantinapertanianlampung@gmail.com" class="footer-link">
+                karantinapertanianlampung@gmail.com
+              </a>
+            </div>
+          </div>
+          <div class="footer-info-card">
+            <div class="info-icon">🕒</div>
+            <div class="info-content">
+              <strong>Jam Pelayanan</strong>
+              <span>Senin – Kamis<br/>08.00 – 16.00 WIB</span>
+              <span style="margin-top:0.25rem; display:block">Jum'at<br/>08.00 – 16.30 WIB</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 4: Quick Links -->
+        <div class="footer-col">
+          <h5 class="footer-heading">Navigasi Cepat</h5>
+          <nav class="footer-nav">
+            <a href="#ringkasan" class="footer-nav-link">
+              <span class="nav-dot">•</span> Ringkasan
+            </a>
+            <a href="#cendawan" class="footer-nav-link">
+              <span class="nav-dot">•</span> Cendawan Inang
+            </a>
+            <a href="#struktur" class="footer-nav-link">
+              <span class="nav-dot">•</span> Struktur Kimia
+            </a>
+            <a href="#dampak" class="footer-nav-link">
+              <span class="nav-dot">•</span> Dampak Kesehatan
+            </a>
+            <a href="#penanganan" class="footer-nav-link">
+              <span class="nav-dot">•</span> Penanganan
+            </a>
+            <a href="#regulasi" class="footer-nav-link">
+              <span class="nav-dot">•</span> Regulasi Global
+            </a>
+            <a href="#tim" class="footer-nav-link">
+              <span class="nav-dot">•</span> Tim Penyusun
+            </a>
+          </nav>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Bottom Bar -->
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="footer-bottom-content">
+        <div class="footer-copyright">
+          <span class="copyright-icon">©</span>
+          <span>2026 Kelompok Toksikologi Okratoksin</span>
+        </div>
+        <div class="footer-meta">
+          <span class="meta-badge">
+            <span class="badge-dot">•</span> Website Pembelajaran
+          </span>
+          <span class="meta-badge">
+            <span class="badge-dot">•</span> Karantina Lampung
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ░░ FAB QUIZ ░░ -->
+<button class="fab-quiz" id="fabQuiz" title="Mulai Kuis">
+  <span>⚗</span>
+</button>
+
+<!-- ░░ QUIZ MODAL ░░ -->
+<div class="quiz-overlay" id="quizOverlay">
+  <div class="quiz-modal">
+    <button class="quiz-close" id="quizClose">✕</button>
+    <div class="quiz-header">
+      <h2>Uji Pengetahuan</h2>
+      <div class="quiz-progress" id="quizProgress"></div>
+      <span class="quiz-counter" id="quizCounter">1 / 7</span>
+    </div>
+    <div id="quizContent"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
