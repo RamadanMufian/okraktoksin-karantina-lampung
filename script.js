@@ -276,7 +276,7 @@ const healthObserver = new IntersectionObserver(entries => {
 healthFills.forEach(f => healthObserver.observe(f));
 
 // ══════════════════════════════════════════════════════════════
-// 8. MOISTURE WIDGET
+// 8. MOISTURE WIDGET (Original + New)
 // ══════════════════════════════════════════════════════════════
 const moistureFill = document.getElementById('moistureFill');
 if (moistureFill) {
@@ -292,6 +292,45 @@ if (moistureFill) {
   }, { threshold: 0.5 });
   moistureObs.observe(moistureFill);
 }
+
+// New interactive moisture widget for step 3
+const moistureFillNew = document.getElementById('moistureFillNew');
+if (moistureFillNew) {
+  const moistureObsNew = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        setTimeout(() => {
+          moistureFillNew.style.width = '12.5%';
+        }, 600);
+        moistureObsNew.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  moistureObsNew.observe(moistureFillNew);
+}
+
+// Interactive 3D step cards
+document.querySelectorAll('.step-card-3d').forEach(card => {
+  card.classList.add('reveal');
+  revealObserver.observe(card);
+  
+  // 3D tilt effect
+  card.addEventListener('mousemove', e => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const rotateX = (y - centerY) / 15;
+    const rotateY = (centerX - x) / 15;
+    
+    card.style.transform = `translateY(-12px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+  });
+  
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = 'translateY(0) rotateX(0) rotateY(0)';
+  });
+});
 
 // ══════════════════════════════════════════════════════════════
 // 9. TABLE SORT & FILTER
@@ -365,7 +404,7 @@ const quizData = [
     opts: ['Ochratoxin A','Organic Toxic Acid','Oxidative Toxin Alkaloid','Ochre Toxic Antigen'], ans: 0 },
   { q: 'OTA dianggap sebagai mikotoksin berbahaya ke berapa setelah aflatoksin?',
     opts: ['Pertama','Kedua','Ketiga','Keempat'], ans: 1 },
-  { q: 'Kapang manakah yang BUKAN penghasil Okratoksin A?',
+  { q: 'Cendawan manakah yang BUKAN penghasil Okratoksin A?',
     opts: ['Aspergillus ochraceus','Penicillium verrucosum','Aspergillus flavus','Aspergillus carbonarius'], ans: 2 },
   { q: 'Batas kadar air biji kopi yang aman agar tidak terkontaminasi OTA adalah…',
     opts: ['≤ 15%','≤ 12,5%','≤ 10%','≤ 8%'], ans: 1 },
